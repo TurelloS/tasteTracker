@@ -58,30 +58,35 @@ for (let i = 0; i < friendFavorites.length; i++) {
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
 
-let foodsWithA = friendFavorites.contains("a")
 
-function aFood(foodA) {
-  if (foodA.includes("a") == true) {
-    foodsWithA.push(foodA)
+let foodsWithA = []
+
+for (let i = 0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].includes("a") == true) {
+    foodsWithA.push(friendFavorites[i])
   }
-};
-
-for (let i = 0; i < favoriteFoods.length; i++) {
-  console.log("One of my favorite foods is " + favoriteFoods[i]);
 };
 
 console.log(foodsWithA);
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
 
-let longFoodNames = {
+let longFoodNames = [];
 
+for (let i = 0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].length > 6 == true) {
+    longFoodNames.push(friendFavorites[i])
+  }
 };
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
 
-let shortFoodNames = {
+let shortFoodNames = [];
 
+for (let i = 0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].length <= 6 == true) {
+    shortFoodNames.push(friendFavorites[i])
+  }
 };
 
 // 9. Print both arrays and compare:
@@ -89,8 +94,26 @@ let shortFoodNames = {
 console.log(longFoodNames);
 console.log(shortFoodNames);
 
+if (longFoodNames.length > shortFoodNames.length) {
+  console.log("There are more long-named foods.")
+} else {
+  console.log("There are more short-named foods.")
+}
+
 
 // 10. STRETCH: Find the longest food name and print:
 // "The longest food name in the list is ______ with ___ characters."
 
-console.log("The longest food name in the list is " + " with " + " characters.");
+let longestWord = ["pie"]
+let wordLength = 0
+
+for (let i = 0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].length > longestWord.length[0] == true) {
+    longestWord.slice(0)
+    longestWord = (friendFavorites[i])
+  }
+};
+
+
+
+console.log("The longest food name in the list is " + longestWord + " with " +  + " characters.");
