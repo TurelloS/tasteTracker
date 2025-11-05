@@ -104,16 +104,15 @@ if (longFoodNames.length > shortFoodNames.length) {
 // 10. STRETCH: Find the longest food name and print:
 // "The longest food name in the list is ______ with ___ characters."
 
-let longestWord = ["pie"]
+let longestWord = [""]
 let wordLength = 0
 
 for (let i = 0; i < friendFavorites.length; i++) {
-  if (friendFavorites[i].length > longestWord.length[0] == true) {
-    longestWord.slice(0)
-    longestWord = (friendFavorites[i])
+  if (friendFavorites[i].length > (wordLength) == true) {
+    longestWord = friendFavorites[i]
+    wordLength = friendFavorites[i].length
   }
 };
 
+console.log("The longest food name in the list is " + longestWord + " with " + wordLength + " characters.");
 
-
-console.log("The longest food name in the list is " + longestWord + " with " +  + " characters.");
